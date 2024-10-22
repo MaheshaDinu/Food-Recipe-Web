@@ -14,7 +14,7 @@ body {
   header{
     height: 5%;
     width: 100%;
-    background-color: #000000bb;
+    background-color: #dbe0d9bb;
     color: #4CAF50;
     display: flex;
     align-items: center;
@@ -26,6 +26,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  nav .burger{
+    display: none;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 0;
   }
 
   nav ul li {
@@ -40,17 +46,24 @@ body {
     color: #4CAF50;
     transition: color 0.3s ease;
   }
+  
 
   nav ul li a:hover{
     color: #86ca89;
   }
 
   .logo{
-    font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+    /*font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);*/
+    font-size: 2vw;
+  }
+  .logo-short{
+    display: none;
+    font-size: 2vw;
+    font-weight: 600;
   }
   .hero{
     width: 100%;
-    height: 40vh;
+    height: 25vw;
     background-image: url(/Assets/Images/food_recipes_background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,11 +84,13 @@ body {
   .hero h2{
     margin: 0%;
     font-family: 'Playwrite CU',cursive;
-    font-size: clamp(3rem, 3vw + 2rem, 4rem);
+    /*font-size: clamp(3rem, 3vw + 2rem, 4rem);*/
+    font-size: 4vw;
   }
 
   .hero p {
-    font-size: clamp(0.75rem, 0.75vw + 0.5rem, 2rem);
+    /*font-size: clamp(0.75rem, 0.75vw + 0.5rem, 2rem);*/
+    font-size: 2vw;
   }
 
   .search-box{
@@ -84,24 +99,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 2.5vw;
+    
   }
 
   .search-box input{
     
     width: 70%;
-    padding: 10px;
+    padding: 1vw;
     outline: none;
     border: 0;
     border-radius: 5px 0 0 5px;
-    font-size: 1rem;
+    font-size: 1vw;
   }
 
   .search-box button{
-    padding: 10px;
+    
+    padding: 1vw;
     outline: none;
     border: 0;
     border-radius: 0 5px 5px 0;
-    font-size: 1rem;
+    font-size: 1vw;
     background-color: #86ca89;
     color: antiquewhite;
     cursor: pointer;
@@ -121,8 +139,9 @@ body {
   .recipes h2{
     text-align: center;
     color: #4CAF50;
-    margin-bottom: 4vh;
-    font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+    margin: 0 4vw;
+    /*font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);*/
+    font-size: 3vw;
   }
     h3, h4 {
     color: #4CAF50; 
@@ -149,11 +168,14 @@ body {
   }
   
   .container{
-    width: 100vw;
+    width: 90vw;
+    margin: 1vw 2vw;
+    background-color: #c2eec4c4;
+    border-radius: 12px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 5vh 2vw;
-    padding: 2vh 2vw;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4vw 2vw;
+    padding: 4vw 2vw;
     margin-right: 2vw;
   }
   
@@ -171,6 +193,7 @@ body {
     overflow: hidden;
     border-radius: 8px;
     height: 15vw;
+    width: 100%;
     
     margin-right: 5.1vw;
   }
@@ -187,7 +210,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 2vw;
+    padding: 0 ;
     transition: height 0.5s;
 
     color: white;
@@ -207,18 +230,91 @@ body {
 footer p{
   text-align: center;
 }
-  
-  
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 1.5rem; 
-    }
-    img {
-      width: 100%; 
-      height: auto;
-    }
-    .recipe-link{
-      max-width: 35vw;
-    }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container{
+    grid-template-columns: repeat(3,1fr);
   }
+  .logo{
+    font-size: 2.5vw;
+  }
+}
+  
+  
+@media (min-width: 426px) and (max-width: 768px) {
+    .nav-list{
+      display: none;
+    }
+    .container{
+      grid-template-columns: repeat(2,1fr);
+    }
+    nav .burger{
+      display: block;
+    }
+    .logo{
+      font-size: 3vw;
+    }
+    footer{
+      font-size: large;
+    }
+    
+
+}
+@media (min-width: 376px) and (max-width:425px) {
+  .nav-list{
+    display: none;
+  }
+  .container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  nav .burger{
+    display: block;
+  }
+  .logo-short{
+    display: block;
+    font-size: 4vw;
+  }
+  .logo{
+    display: none;
+  }
+}
+@media (min-width: 321px) and (max-width:375px) {
+  .nav-list{
+    display: none;
+  }
+  .container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  nav .burger{
+    display: block;
+  }
+  .logo-short{
+    display: block;
+    font-size: 4vw;
+  }
+  .logo{
+    display: none;
+  }
+}
+@media (max-width:320px) {
+  .nav-list{
+    display: none;
+  }
+  .container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+  nav .burger{
+    display: block;
+  }
+  .logo-short{
+    display: block;
+    font-size: 4vw;
+  }
+  .logo{
+    display: none;
+  }
+  
+}
+
   
