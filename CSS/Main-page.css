@@ -298,6 +298,9 @@ footer p{
   .logo{
     display: none;
   }
+  .card-link{
+    height: 20vw;
+  }
 }
 @media (max-width:320px) {
   .nav-list{
@@ -316,6 +319,9 @@ footer p{
   }
   .logo{
     display: none;
+  }
+  .card-link{
+    height: 20vw;
   }
   
 }
