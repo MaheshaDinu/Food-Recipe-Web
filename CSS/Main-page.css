@@ -277,6 +277,9 @@ footer p{
   .logo{
     display: none;
   }
+  .card-link{
+    height: 20vw;
+  }
 }
 @media (min-width: 321px) and (max-width:375px) {
   .nav-list{
