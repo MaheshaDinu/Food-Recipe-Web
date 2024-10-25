@@ -27,12 +27,7 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  nav .burger{
-    display: none;
-    height: 5vw;
-    width: 5vw;
-    border-radius: 0;
-  }
+  
 
   nav ul li {
     list-style: none;
@@ -60,6 +55,60 @@ body {
     display: none;
     font-size: 2vw;
     font-weight: 600;
+  }
+  .burger {
+    display: none;
+    color: white;
+    height: 8vw;
+    width: 8vw;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .menu-panel {
+    background-color: #388E3C;
+    color: white;
+    height: 100%;
+    width: 75vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right 0.4s ease;
+  }
+
+  .menu-panel ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10vw;
+    
+  }
+
+  .menu-panel ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+  .menu-panel ul li:hover{
+    background-color: #86ca89;
+  }
+
+  .menu-panel ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    margin: 3vw;
+    border: none;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   .hero{
     width: 100%;
@@ -257,6 +306,9 @@ footer p{
     footer{
       font-size: large;
     }
+    .menu-panel.active {
+      right: 0;
+    }
     
 
 }
@@ -273,12 +325,16 @@ footer p{
   .logo-short{
     display: block;
     font-size: 4vw;
+    font-weight: 700;
   }
   .logo{
     display: none;
   }
   .card-link{
     height: 20vw;
+  }
+  .menu-panel.active {
+    right: 0;
   }
 }
 @media (min-width: 321px) and (max-width:375px) {
@@ -294,12 +350,16 @@ footer p{
   .logo-short{
     display: block;
     font-size: 4vw;
+    font-weight: 800;
   }
   .logo{
     display: none;
   }
   .card-link{
     height: 20vw;
+  }
+  .menu-panel.active {
+    right: 0;
   }
 }
 @media (max-width:320px) {
@@ -316,12 +376,16 @@ footer p{
   .logo-short{
     display: block;
     font-size: 4vw;
+    font-weight: 900;
   }
   .logo{
     display: none;
   }
   .card-link{
     height: 20vw;
+  }
+  .menu-panel.active {
+    right: 0;
   }
   
 }

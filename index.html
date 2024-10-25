@@ -27,12 +27,13 @@
           <ul class="nav-list">
             <li><a id="active" href="/index.html">Home</a></li>
             <li>About</li>
-            <li>Recipe</li>
+            <li>recipes</li>
             <li>Contact</li>
           </ul>
         </nav>
       </div>
     </header>
+    
 
     <section class="hero">
       <div class="hero-section">
@@ -115,9 +116,38 @@
         </section>
       </nav>
     </main>
+    <div class="menu-panel" id="menu-panel-id">
+      <button class="close-btn">
+        <img
+          class="close-btn"
+          id="btn-close"
+          src="https://img.icons8.com/?size=100&id=71200&format=png&color=ffffffff"
+          alt="close-icon"
+        />
+      </button>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
 
     <footer>
       <p>&copy; 2024 The Culinary Corner</p>
     </footer>
+    <script>
+      const burger = document.getElementById("burger");
+      const menuPanel = document.getElementById("menu-panel-id");
+      const closeBtn = document.getElementById("btn-close");
+
+      burger.addEventListener("click", () => {
+        menuPanel.classList.toggle("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menuPanel.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
